@@ -1,0 +1,112 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*CORE BRAFTON COLORS*/
+/*End core brafton colors...*/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/* Compliance-related style edits - 11/15/18 */
+/* Home >
+Create Your Strategy */
+/* line 7, ../scss/modules/_compliance.scss */
+.header a.logo-wrapper #logo {
+  background: none;
+}
+@media (min-width: 1030px) {
+  /* line 14, ../scss/modules/_compliance.scss */
+  .header a.logo-wrapper {
+    width: 50px;
+    height: 55px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+  }
+  /* line 23, ../scss/modules/_compliance.scss */
+  .header .fixed .wrap nav {
+    clear: none;
+  }
+  /* line 28, ../scss/modules/_compliance.scss */
+  .header .fixed.shrink a.logo-wrapper {
+    width: 50px;
+    height: 55px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+  }
+  /* line 34, ../scss/modules/_compliance.scss */
+  .header .fixed.shrink a.logo-wrapper #logo {
+    width: 240px;
+    height: auto;
+  }
+}
+@media (min-width: 1250px) {
+  /* line 43, ../scss/modules/_compliance.scss */
+  .header a.logo-wrapper {
+    width: auto;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+/* line 51, ../scss/modules/_compliance.scss */
+.strategy button.green-btn {
+  margin-top: 0;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px 20px;
+  background: #8CC040;
+  color: #fff;
+  border: 0px;
+  font-weight: 700;
+  margin-top: 1em;
+}
+/* line 61, ../scss/modules/_compliance.scss */
+.strategy button.green-btn:hover {
+  background-color: #7ead39;
+}
+@media (min-width: 768px) {
+  /* line 66, ../scss/modules/_compliance.scss */
+  .strategy button.green-btn {
+    margin-top: 0;
+  }
+}
+
+/* Home >
+Expertise */
+/* line 77, ../scss/modules/_compliance.scss */
+.home #expertise .d-all .d-1of3 .img {
+  display: none;
+}
+/* line 86, ../scss/modules/_compliance.scss */
+.home #expertise .d-all .d-1of3.creation img, .home #expertise .d-all .d-1of3.ebooks img, .home #expertise .d-all .d-1of3.infographix img, .home #expertise .d-all .d-1of3.video img, .home #expertise .d-all .d-1of3.casestudies img, .home #expertise .d-all .d-1of3.newsletters img {
+  object-position: 0 0;
+  height: auto;
+  width: auto;
+  object-fit: none;
+}
+
+/* Footer >
+Social Icons */
+/* line 100, ../scss/modules/_compliance.scss */
+.footer .social a {
+  width: 46px;
+  height: 38px;
+  overflow: hidden;
+}

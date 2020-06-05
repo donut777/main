@@ -1,0 +1,112 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
+@media all and (-ms-high-contrast: none) {
+  /* line 51, ../scss/ie.scss */
+  .blog .posts .d-all,
+  .archive .posts .d-all,
+  .page-template-page-blog-content-creation .posts .d-all,
+  .page-template-page-blog-content-distribution .posts .d-all,
+  .page-template-page-blog-content-strategy .posts .d-all,
+  .page-template-page-blog-life-at-brafton .posts .d-all,
+  .page-template-page-success-stories .posts .d-all {
+    display: block;
+  }
+
+  /* line 60, ../scss/ie.scss */
+  .single #main {
+    display: block;
+  }
+
+  /* line 63, ../scss/ie.scss */
+  .footer {
+    width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none) and (min-width: 768px) {
+  /* line 75, ../scss/ie.scss */
+  .blog .posts .d-all .article,
+  .archive .posts .d-all .article,
+  .page-template-page-blog-content-creation .posts .d-all .article,
+  .page-template-page-blog-content-distribution .posts .d-all .article,
+  .page-template-page-blog-content-strategy .posts .d-all .article,
+  .page-template-page-blog-life-at-brafton .posts .d-all .article,
+  .page-template-page-success-stories .posts .d-all .article {
+    width: 33.3%;
+    float: left;
+  }
+  /* line 78, ../scss/ie.scss */
+  .blog .posts .d-all .article:nth-of-type(4),
+  .archive .posts .d-all .article:nth-of-type(4),
+  .page-template-page-blog-content-creation .posts .d-all .article:nth-of-type(4),
+  .page-template-page-blog-content-distribution .posts .d-all .article:nth-of-type(4),
+  .page-template-page-blog-content-strategy .posts .d-all .article:nth-of-type(4),
+  .page-template-page-blog-life-at-brafton .posts .d-all .article:nth-of-type(4),
+  .page-template-page-success-stories .posts .d-all .article:nth-of-type(4) {
+    clear: both;
+  }
+  /* line 81, ../scss/ie.scss */
+  .blog .posts .d-all .article:nth-of-type(7),
+  .archive .posts .d-all .article:nth-of-type(7),
+  .page-template-page-blog-content-creation .posts .d-all .article:nth-of-type(7),
+  .page-template-page-blog-content-distribution .posts .d-all .article:nth-of-type(7),
+  .page-template-page-blog-content-strategy .posts .d-all .article:nth-of-type(7),
+  .page-template-page-blog-life-at-brafton .posts .d-all .article:nth-of-type(7),
+  .page-template-page-success-stories .posts .d-all .article:nth-of-type(7) {
+    clear: both;
+  }
+
+  /* line 86, ../scss/ie.scss */
+  .single #main {
+    overflow: auto;
+  }
+  /* line 88, ../scss/ie.scss */
+  .single #main article {
+    float: left;
+    width: 70%;
+  }
+  /* line 92, ../scss/ie.scss */
+  .single #main .sidebar {
+    float: right;
+    width: 30%;
+  }
+}
